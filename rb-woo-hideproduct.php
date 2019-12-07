@@ -5,7 +5,7 @@
 *
 * @wordpress-plugin
 * Plugin Name:    Hide product from Shop for Woocommerce.
-* Plugin URI:     
+* Plugin URI:     https://github.com/Rabdan/rb-woo-hideproduct
 * Description:    Hide product from Shop for Woocommerce.
 * Version:        1.0.0
 * Author:         Rabdan
