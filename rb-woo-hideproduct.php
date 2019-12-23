@@ -80,23 +80,26 @@ class RB_Custom_WooCommerce_Display {
    }
 
     public function RB_hide_from_query( $meta_query, $query ) {
-	    // Only on shop pages
-	    if( ! is_shop() ) return $meta_query;
+	    // Only on shop or category pages
+      if( is_shop() || is_category() ) {
 
-	    $meta_query[] = array(
-		   'relation' => 'OR',
-		    array(
-		        'key'     => $this->chfield_id,
-		        'value'   => 'yes',
-		        'compare' => '!='
-		    ),
-		    array(
-		        'key'     => $this->chfield_id,
-		        'compare' => 'NOT EXISTS',
-		    ),
+  	    $meta_query[] = array(
+  		   'relation' => 'OR',
+  		    array(
+  		        'key'     => $this->chfield_id,
+  		        'value'   => 'yes',
+  		        'compare' => '!='
+  		    ),
+  		    array(
+  		        'key'     => $this->chfield_id,
+  		        'compare' => 'NOT EXISTS',
+  		    ),
 
-	    );
+  	    );
+      }
 	    return $meta_query;
+
+    }
 	}
 }
 
