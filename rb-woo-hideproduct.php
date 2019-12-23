@@ -79,7 +79,7 @@ class RB_Custom_WooCommerce_Display {
        );
    }
 
-    public function RB_hide_from_query( $meta_query, $query ) {
+  public function RB_hide_from_query( $meta_query, $query ) {
 	    // Only on shop or category pages
       if( is_shop() || is_category() ) {
 
@@ -97,10 +97,9 @@ class RB_Custom_WooCommerce_Display {
 
   	    );
       }
-	    return $meta_query;
+	   return $meta_query;
 
-    }
-	}
+  }
 }
 
 
